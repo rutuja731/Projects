@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image recogination</title>
+
+    <!-- Custom style -->
+    <link rel="stylesheet" href="app.css">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+<!-- TensorFlow without source map -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.0.0/dist/tf.min.js"></script>
+
+<!-- TensorFlow pretrained model-->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.0.4"></script>
+
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="manifest" href="./favicons/site.webmanifest">
+</head>
+<body class="loading">
+    <main>
+
+        <h1>IMAGE RECONGINATION</h1>
+
+        <div class="loader">
+            <h2>Loading ...</h2>
+        </div>
+
+        <section class="image-section">
+            <img src="" id="image" />
+            <div class="image-prediction" id="prediction"></div>
+        </section>
+
+        <section class="file-section">
+            <div class="file-group">
+                <label for="file-input" accept="image/x-png,image/gif,image/jpeg">Upload a picture</label>
+                <input type="file" id="file-input" />
+                <div class="error" id="input-error">An error occured. Is your file really an image ?</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js" defer></script>
+
+</body>
+</html>

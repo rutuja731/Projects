@@ -1,0 +1,134 @@
+/* Global Styles */
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background: linear-gradient(to right, grey, #424344);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px; /* Added padding for better spacing */
+}
+
+/* Headings */
+h1 {
+  margin-bottom: 1rem;
+  font-size: 36px; /* Increased font size */
+  font-weight: 600;
+  color: #fff; /* White color for better contrast */
+}
+
+/* Credits Links */
+.credits a {
+  color: #fff; /* White links */
+  text-decoration: none;
+}
+
+.credits a:hover {
+  text-decoration: underline;
+}
+
+/* File Section */
+.file-group {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: box-shadow 0.3s ease; /* Transition for hover effect */
+}
+
+.file-group:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+/* Image Section */
+#image {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  display: block;
+  margin: 20px auto; /* Margin for better spacing */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for the image */
+}
+
+.image-section {
+  display: none;
+  position: relative;
+}
+
+.image-loaded .image-section {
+  display: block;
+}
+
+.image-section::before {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.6)); /* Gradient effect */
+}
+
+.image-prediction {
+  position: absolute;
+  bottom: 1rem;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+/* Loader */
+.loading .loader {
+  display: block;
+}
+
+.loader {
+  display: none;
+  font-size: 20px; /* Font size for the loader */
+  color: #ff4757; /* Color for the loader */
+  margin-bottom: 20px; /* Space below loader */
+}
+
+.loading .image-section,
+.loading .file-section {
+  display: none;
+}
+
+/* Error Message */
+.error {
+  display: none;
+  color: #ff0000; /* Red for error message */
+  font-weight: 600; /* Bold error message */
+}
+
+.error.show {
+  display: block;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+      font-size: 28px; /* Smaller font size for mobile */
+  }
+
+  #image {
+      width: 100%; /* Full width on smaller screens */
+  }
+
+  .file-group {
+      padding: 0.5rem; /* Adjust padding for mobile */
+  }
+}
