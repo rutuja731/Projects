@@ -1,0 +1,76 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div class="hero-banner position-relative mb-5">
+  <img src="{% static 'images/yoga1.jpg' %}" class="d-block w-100 hero-image" alt="Classes Banner">
+
+  <div class="carousel-caption d-flex flex-column align-items-center justify-content-center text-center h-100" style="top: 0; background: rgba(0, 0, 0, 0.4);">
+    <h1 class="text-uppercase fw-bold" style="color: #e0e0e0; font-size: 4rem; font-style: italic;">#OFFERS</h1>
+    <p class="lead fw-semibold text-white">
+      Discover strength, flexibility, and focus — join a class that inspires you.
+    </p>
+    <a href="{% url 'joinus' %}" class="btn btn-warning px-4 py-2 mt-3">Explore Classes</a>
+  </div>
+</div>
+
+
+<!-- offers-->
+
+<!-- Offers Section -->
+<div class="container mb-5">
+  <h2 class="text-center fw-bold fst-italic mb-4">Our Special Offers</h2>
+  <div class="row g-4">
+
+    <!-- Offer Card 1 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow">
+        <img src="{% static 'images/image1.jpg' %}" class="card-img-top" alt="Free Trial">
+        <div class="card-body">
+<div class="card-title bg-warning text-dark fw-bold text-center py-2 rounded">
+        Free 1-Day Trial
+      </div>
+<p class="card-text">Experience our gym with a free 1-day access. No strings attached!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Offer Card 2 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow">
+        <img src="{% static 'images/image2.jpg' %}" class="card-img-top" alt="Personal Trainer Discount">
+        <div class="card-body">
+            <div class="card-title bg-warning text-dark fw-bold text-center py-2 rounded">
+        20% Off Personal Training
+      </div>
+
+
+          <p class="card-text">Get personalized training sessions at 20% off for your first 3 months.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Offer Card 3 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow">
+        <img src="{% static 'images/refer1.jpg' %}" class="card-img-top" alt="Group Offer">
+        <div class="card-body">
+                        <div class="card-title bg-warning text-dark fw-bold text-center py-2 rounded">
+        Bring a Friend - 1 Month Free
+      </div>
+
+
+
+          <p class="card-text">Join with a partner or friend and receive an additional month free!</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+{%endblock%}

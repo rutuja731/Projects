@@ -1,0 +1,100 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div class="hero-banner position-relative mb-5">
+  <img src="{% static 'images/yoga1.jpg' %}" class="d-block w-100 hero-image" alt="Classes Banner">
+
+  <div class="carousel-caption d-flex flex-column align-items-center justify-content-center text-center h-100" style="top: 0; background: rgba(0, 0, 0, 0.4);">
+    <h1 class="text-uppercase fw-bold" style="color: #e0e0e0; font-size: 4rem; font-style: italic;">#CLASSES</h1>
+    <p class="lead fw-semibold text-white">
+      Discover strength, flexibility, and focus — join a class that inspires you.
+    </p>
+    <a href="{% url 'joinus' %}" class="btn btn-warning px-4 py-2 mt-3">Explore Classes</a>
+  </div>
+</div>
+
+<!-- Cards Section -->
+<div class="container my-5">
+  <div class="row g-4">
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="{% static 'images/yoga2.jpg' %}" class="card-img-top" alt="Yoga">
+        <div class="card-body">
+          <h5 class="card-title">YOGA</h5>
+          <p class="card-text">A calming session focused on mindful breathwork, gentle flexibility, and balance. Suitable for all levels.
+
+</p>
+          <a href="{% url 'joinus' %}" class="btn btn-warning">Join Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="{% static 'images/zumba.jpg' %}" class="card-img-top" alt="Zumba">
+        <div class="card-body">
+          <h5 class="card-title">ZUMBA</h5>
+          <p class="card-text">A high-energy cardio workout that combines dance and fitness moves. Great for burning calories.</p>
+          <a href="{% url 'joinus' %}" class="btn btn-warning">Join Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="{% static 'images/pilates.jpg' %}" class="card-img-top" alt="Pilates">
+        <div class="card-body">
+          <h5 class="card-title">PILATES</h5>
+          <p class="card-text">Improve core strength, flexibility, and posture through low-impact stretching and movement.</p>
+          <a href="{% url 'joinus' %}" class="btn btn-warning">Join Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="{% static 'images/boxing.jpg' %}" class="card-img-top" alt="Strength">
+        <div class="card-body">
+          <h5 class="card-title">BOXING</h5>
+          <p class="card-text">Unleash your inner fighter with high-intensity boxing workouts. Improve strength, coordination, and endurance while burning serious calories.
+</p>
+          <a href="{% url 'joinus' %}" class="btn btn-warning">Join Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="{% static 'images/swim.jpg' %}" class="card-img-top" alt="HIIT">
+        <div class="card-body">
+          <h5 class="card-title">SWIMMING</h5>
+          <p class="card-text">Dive into a full-body workout that boosts stamina, tones muscles, and supports joint health. Perfect for all skill levels and fitness goals.
+</p>
+          <a href="{% url 'joinus' %}" class="btn btn-warning">Join Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="{% static 'images/meditation.jpg' %}" class="card-img-top" alt="Meditation">
+        <div class="card-body">
+          <h5 class="card-title">MEDITATION</h5>
+          <p class="card-text">Find your calm and improve mental clarity with guided mindfulness, focused breathing exercises, and soothing relaxation techniques.</p>
+          <a href="{% url 'joinus' %}" class="btn btn-warning">Join Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

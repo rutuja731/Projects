@@ -1,0 +1,80 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div class="hero-banner position-relative mb-5">
+  <img src="{% static 'images/image3.jpg' %}" class="d-block w-100 hero-image" alt="Classes Banner">
+
+  <div class="carousel-caption d-flex flex-column align-items-center justify-content-center text-center h-100" style="top: 0; background: rgba(0, 0, 0, 0.4);">
+    <h1 class="text-uppercase fw-bold" style="color: #e0e0e0; font-size: 4rem; font-style: italic;">PERSONAL TRAINING</h1>
+    <p class="lead fw-semibold text-white">
+Get stronger, feel better, and transform your life — one session at a time.
+
+
+    </p>
+    <a href="{% url 'joinus' %}" class="btn btn-warning px-4 py-2 mt-3">Explore Classes</a>
+  </div>
+</div>
+
+
+
+<<div class="container py-5">
+  <h2 class="text-center text-dark fw-bold mb-5" style="font-size: 3.5rem;"><i>OUR TRANSFORMATIONS</i></h2>
+
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner rounded">
+
+      <!-- Item 1 -->
+      <div class="carousel-item active text-center">
+        <div class="d-inline-block position-relative" style="max-width: 100%;">
+          <img src="{% static 'images/wl4.jpg' %}" class="img-fluid" style="object-fit: contain; height: 500px;" alt="Transformation 1">
+          <div class="overlay-box position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+            <h3 class="fw-bold text-white">John Doe</h3>
+            <p class="text-light mb-1">Personal Trainer: Sarah Smith</p>
+            <p class="text-white">Lost <strong>25 kg</strong> in 6 months.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="carousel-item text-center">
+        <div class="d-inline-block position-relative" style="max-width: 100%;">
+          <img src="{% static 'images/wl5.jpg' %}" class="img-fluid" style="object-fit: contain; height: 500px;" alt="Transformation 2">
+          <div class="overlay-box position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+<h3 class="fw-bold text-white">Emily Watson</h3>
+              <p class="text-light mb-1">Personal Trainer: Alex Brown</p>
+              <p class="text-white">Emily dropped <strong>18 kg</strong> while gaining strength and confidence through her transformation journey.</p>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="carousel-item text-center">
+        <div class="d-inline-block position-relative" style="max-width: 100%;">
+          <img src="{% static 'images/wl6.jpg' %}" class="img-fluid" style="object-fit: contain; height: 500px;" alt="Transformation 3">
+          <div class="overlay-box position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+            <h3 class="fw-bold text-white">Michael Lee</h3>
+            <p class="text-light mb-1">Personal Trainer: Jessica Green</p>
+            <p class="text-white">Lost <strong>30 kg</strong> and changed his lifestyle.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+{% endblock %}
